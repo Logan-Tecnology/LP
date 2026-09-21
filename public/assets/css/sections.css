@@ -1,0 +1,719 @@
+/* ==========================================================================
+   LOGAN TECHNOLOGY - SECTIONS STYLES
+   Regra: Cores Sólidas. Sem Degradês. Alto Contraste. Espaço em Branco.
+   ========================================================================== */
+
+/* 1. HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-subtle);
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0.25rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-primary-blue);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  border-radius: var(--radius-sm);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-white);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary-dark);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .line-1 {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .line-2 {
+  opacity: 0;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .line-3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-mobile-drawer {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-top: 1px solid var(--color-border-subtle);
+  overflow-y: auto;
+  z-index: var(--z-header);
+}
+
+.nav-mobile-drawer.open {
+  display: flex;
+}
+
+.nav-mobile-link {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+/* 2. HERO SECTION */
+.hero-section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-headline {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary-dark);
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* 3. SEÇÃO O PROBLEMA */
+.section-problem {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-bg-light);
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* 4. SEÇÃO DE IMPACTO (Fundo Azul Escuro Sólido) */
+.section-impact {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.section-impact .section-title {
+  color: var(--color-white);
+}
+
+.section-impact .section-subtitle {
+  color: #94A3B8;
+}
+
+.impact-flow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: var(--spacing-2xl) auto;
+}
+
+.impact-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.impact-step-card {
+  background-color: var(--color-dark-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 0.875rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  position: relative;
+}
+
+.step-number {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  color: #38BDF8;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.375rem;
+}
+
+.step-text {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.impact-step-card.step-final {
+  background-color: #3B1219;
+  border-color: #991B1B;
+}
+
+.impact-step-card.step-final .step-number {
+  color: #F87171;
+}
+
+.impact-step-card.step-final .step-text {
+  color: #FECACA;
+}
+
+.impact-conclusion-box {
+  background-color: var(--color-dark-surface);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 2rem;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.impact-conclusion-text {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: #E2E8F0;
+  margin: 0;
+}
+
+/* 5. SEÇÃO SEGURANÇA */
+.section-security {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-white);
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.security-cta-wrapper {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+/* 6. SEÇÃO SOLUÇÕES LOGAN */
+.section-solutions {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-bg-light);
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* 7. SISTEMAS JURÍDICOS E CERTIFICADOS */
+.section-legaltech {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.legaltech-components-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.legaltech-item {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.legaltech-icon {
+  color: var(--color-primary-blue);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.legaltech-label {
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+}
+
+.tribunais-bar {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.tribunais-title {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.tribunais-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tribunal-tag {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  background-color: var(--color-white);
+  padding: 0.375rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.disclaimer-box {
+  background-color: #F8FAFC;
+  border-left: 4px solid var(--color-primary-blue);
+  border-top: 1px solid var(--color-border-subtle);
+  border-right: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* 8. TI REATIVA X TI GERENCIADA */
+.section-comparison {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-bg-light);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.comparison-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-border-strong);
+}
+
+.comparison-card.reactive {
+  border-top: 4px solid var(--color-status-danger);
+}
+
+.comparison-card.managed {
+  border-top: 4px solid var(--color-accent-blue);
+  background-color: #FFFFFF;
+}
+
+.comparison-header {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.comparison-type-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+
+.tag-reactive {
+  background-color: var(--color-status-danger-bg);
+  color: var(--color-status-danger);
+}
+
+.tag-managed {
+  background-color: #E0F2FE;
+  color: var(--color-accent-blue);
+}
+
+.comparison-flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.comparison-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.comparison-step .step-icon {
+  flex-shrink: 0;
+}
+
+.comparison-conclusion {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+}
+
+/* 9. DIFERENCIAIS LOGAN */
+.section-why-logan {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-white);
+}
+
+.differentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.differential-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+}
+
+.differential-badge {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  background-color: #F0F7FF;
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+}
+
+.differential-footnote {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* 10. DIAGNÓSTICO DE TI & FORMULÁRIO */
+.section-diagnostic {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.diagnostic-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+/* 11. CTA INTERMEDIÁRIO (Azul Noturno Sólido) */
+.section-intermediate-cta {
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  text-align: center;
+}
+
+.section-intermediate-cta .section-title {
+  color: var(--color-white);
+}
+
+.section-intermediate-cta .section-subtitle {
+  color: #CBD5E1;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* 12. FAQ */
+.section-faq {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-white);
+}
+
+/* 13. CTA FINAL */
+.section-final-cta {
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border-subtle);
+  text-align: center;
+}
+
+.final-cta-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta-content .hero-ctas {
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.final-credentials {
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+/* 14. FOOTER */
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: #94A3B8;
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-2xl);
+  border-top: 1px solid #1E293B;
+  font-size: 0.875rem;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-2xl);
+  border-bottom: 1px solid #1E293B;
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-brand-text h3 {
+  color: var(--color-white);
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: #94A3B8;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE DAS SEÇÕES
+   Breakpoints: 1024px, 768px, 640px, 390px, 320px
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  .diagnostic-layout-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .impact-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-step-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: 64px;
+  }
+  .header-logo-img {
+    height: 34px;
+  }
+  .nav-desktop, .header-cta-desktop {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
+  .legaltech-components-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .differentials-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+  .trust-badges-row {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}

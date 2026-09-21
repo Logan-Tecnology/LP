@@ -1,0 +1,23 @@
+{
+  "name": "logan-lp-advocacia",
+  "version": "1.0.0",
+  "description": "Landing Page de Alta Conversão - Gestão e Suporte de TI para Escritórios de Advocacia (Logan Technology)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "logan-technology",
+    "landing-page",
+    "ti-para-advocacia",
+    "b2b",
+    "google-ads",
+    "cro"
+  ],
+  "author": "Logan Technology",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

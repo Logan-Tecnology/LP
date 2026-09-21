@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://logan.com.br/ti-para-advocacia/sitemap.xml

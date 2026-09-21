@@ -1,0 +1,90 @@
+/* ==========================================================================
+   LOGAN TECHNOLOGY - DESIGN TOKENS & SYSTEM VARIABLES
+   Regra estrita: CORES SÓLIDAS APENAS. SEM GRADIENTES.
+   ========================================================================== */
+
+:root {
+  /* Cores Principais Sólidas - Identidade Logan */
+  --color-primary-dark: #0B192C;     /* Azul Marinho Profundo Sólido */
+  --color-primary-navy: #102A45;     /* Azul Noturno Corporativo Sólido */
+  --color-primary-blue: #004385;     /* Azul Institucional Logan */
+  --color-accent-blue: #0066CC;      /* Azul de Destaque / Ação */
+  --color-accent-hover: #0052A3;     /* Hover do Azul de Ação */
+  --color-accent-active: #003D7A;    /* Active do Azul de Ação */
+
+  /* Cores Neutras e Fundo */
+  --color-white: #FFFFFF;            /* Branco Puro */
+  --color-bg-light: #F8FAFC;         /* Cinza Claro / Slate 50 */
+  --color-bg-alt: #F1F5F9;           /* Cinza Alternativo / Slate 100 */
+  --color-card-bg: #FFFFFF;          /* Fundo dos Cards */
+  --color-dark-surface: #14243B;     /* Superfície dos cards em fundo escuro */
+
+  /* Tipografia & Contrastes */
+  --color-text-main: #0F172A;        /* Grafite Muito Escuro / Slate 900 */
+  --color-text-secondary: #334155;   /* Grafite Médio / Slate 700 */
+  --color-text-muted: #64748B;       /* Cinza Grafite Mudo / Slate 500 */
+  --color-text-light: #E2E8F0;       /* Texto Claro para Fundo Escuro */
+  --color-text-white: #FFFFFF;
+
+  /* Bordas e Divisores Sólidos */
+  --color-border-subtle: #E2E8F0;    /* Borda Discreta / Slate 200 */
+  --color-border-strong: #CBD5E1;    /* Borda Forte / Slate 300 */
+  --color-border-dark: #243954;      /* Borda para seções escuras */
+
+  /* Indicadores de Classificação / Status (Discretos) */
+  --color-status-success: #15803D;   /* Verde Adequado */
+  --color-status-success-bg: #DCFCE7;
+  --color-status-success-border: #86EFAC;
+
+  --color-status-warning: #B45309;   /* Âmbar Atenção */
+  --color-status-warning-bg: #FEF3C7;
+  --color-status-warning-border: #FCD34D;
+
+  --color-status-danger: #B91C1C;    /* Vermelho Risco */
+  --color-status-danger-bg: #FEE2E2;
+  --color-status-danger-border: #FCA5A5;
+
+  /* WhatsApp Oficial Sólido */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE5D;
+
+  /* Tipografia */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Espaçamentos */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4.5rem;   /* 72px */
+  --spacing-4xl: 6rem;     /* 96px */
+
+  /* Arredondamento Moderado */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Sombras Extremamente Suaves */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+
+  /* Dimensões de Layout */
+  --container-max-width: 1200px;
+  --header-height: 76px;
+  --z-header: 100;
+  --z-mobile-bar: 90;
+  --z-floating: 80;
+  --z-modal: 1000;
+
+  /* Transições Sutis */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
